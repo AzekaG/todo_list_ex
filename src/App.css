@@ -32,7 +32,155 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
+header {
+  background: #00c8ff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.theme-dark {
+  background: #310b5e;
+}
+
+.theme-dark a {
+  color: rgb(255, 237, 237);
+}
+
+a {
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.theme-dark body {
+  background-color: green;
+}
+
+nav {
+  display: flex;
+  gap: 1.5em;
+}
+
+button a {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #444;
+}
+
+button {
+  display: inline-block;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  height: 28px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #444;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  transition: box-shadow 0.2s;
+}
+
+button:focus-visible {
+  border: 1px solid #4c51f9;
+  outline: none;
+}
+
+button:hover {
+  transition: all 0.2s;
+  box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+}
+
+button:active {
+  background-color: #808080;
+}
+
+.button:disabled {
+  background-color: #eee;
+  border-color: #eee;
+  color: #444;
+  cursor: not-allowed;
+}
+
+
+
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #000000;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+
+.form__field:focus~.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+
+/* demo */
